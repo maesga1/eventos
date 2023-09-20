@@ -1,1 +1,13 @@
-<p>detalle-evento works!</p>
+
+
+<div *ngIf="evento">
+    <h2>Detalles del Evento</h2>
+    <h3>{{ evento.nombre }}</h3>
+    <p>Fecha: {{ evento.fecha }}</p>
+    <p>Ubicación: {{ evento.ubicacion }}</p>
+    <p>Descripción: {{ evento.descripcion }}</p>
+  </div>
+  <div *ngIf="!evento">
+    <p>Evento no encontrado.</p>
+  </div>
+  
