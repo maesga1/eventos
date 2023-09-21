@@ -7,13 +7,17 @@ import { ListaEventosComponent } from './components/lista-eventos/lista-eventos.
 import { DetalleEventoComponent } from './components/detalle-evento/detalle-evento.component';
 import { CrearEventoComponent } from './components/crear-evento/crear-evento.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './shared/footer/footer.component';
+import { HeaderComponent } from './shared/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaEventosComponent,
     DetalleEventoComponent,
-    CrearEventoComponent
+    CrearEventoComponent,
+    FooterComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
