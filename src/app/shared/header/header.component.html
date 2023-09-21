@@ -1,20 +1,19 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Mi Aplicación</a>
+<nav class="navbar navbar-expand-lg navbar-light navbar-light">
+    <a class="navbar-brand" href="#">Diferent is Equal</a>
     <button class="navbar-toggler" type="button" (click)="toggleMenu()">
-      <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" [ngClass]="{'show': isMenuOpen}" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" [routerLink]="['/inicio']">Inicio <span class="sr-only"></span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/eventos']">Eventos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/contacto']">Contacto</a>
-        </li>
-      </ul>
+        <ul class="navbar-nav ml-auto"> 
+            <li class="nav-item active">
+                <a class="nav-link nav-link" [routerLink]="['/inicio']">Inicio <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-link" [routerLink]="['']">Eventos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-link" [routerLink]="['/contacto']">Contacto</a>
+            </li>
+        </ul>
     </div>
-  </nav>
-  
+</nav>

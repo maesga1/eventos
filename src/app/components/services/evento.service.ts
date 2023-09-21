@@ -1,5 +1,3 @@
-
-
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -8,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EventoService {
-  private baseUrl = 'http://localhost:8000/evento'; 
+  private baseUrl = 'http://localhost:8000/evento';
 
   constructor(private http: HttpClient) { }
 
@@ -17,12 +15,11 @@ export class EventoService {
   }
 
   obtenerDetalleEvento(eventId: string): Observable<any> {
-    return this.http.get<any>(this.baseUrl);
+
+    return this.http.get<any>(`${this.baseUrl}/${eventId}`);
   }
 
   crearNuevoEvento(evento: any): Observable<any> {
     return this.http.post<any>(`${this.baseUrl}/evento`, evento);
   }
-
-
 }

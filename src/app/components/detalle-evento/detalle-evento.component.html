@@ -1,13 +1,10 @@
 
-
-<div *ngIf="evento">
-    <h2>Detalles del Evento</h2>
-    <h3>{{ evento.nombre }}</h3>
-    <p>Fecha: {{ evento.fecha }}</p>
-    <p>Ubicación: {{ evento.ubicacion }}</p>
-    <p>Descripción: {{ evento.descripcion }}</p>
-  </div>
-  <div *ngIf="!evento">
-    <p>Evento no encontrado.</p>
-  </div>
-  
+<div *ngIf="evento" class="id">
+  <h2>Detalles del Evento</h2>
+  <h3>{{ evento.nombre }}</h3>
+  <p>Fecha: {{ evento.fecha | date: 'dd/MM/yyyy'}}</p>
+  <p>Ubicación: {{ evento.lugar }}</p>
+  <p>Descripción: {{ evento.descripcion }}</p>
+  <p>Tipo: {{ evento.tipo }}</p>
+</div>
+<button class="send">Inscribirse</button>

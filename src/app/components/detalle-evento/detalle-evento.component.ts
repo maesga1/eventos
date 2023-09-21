@@ -8,19 +8,32 @@ import { EventoService } from '../services/evento.service';
 })
 export class DetalleEventoComponent implements OnInit {
 
-  event: any;
   evento: any;
  
 
   constructor(private route: ActivatedRoute, private eventoService: EventoService) { }
 
-  ngOnInit(): void {
-    const eventId = this.route.snapshot.paramMap.get('id') as string;
+ ngOnInit(): void {
+    
+    const eventoId = this.route.snapshot.paramMap.get('id');
 
+    
+    this.obtenerDetalleEvento(eventoId);
+  }
 
-   
-    this.eventoService.obtenerDetalleEvento(eventId).subscribe(evento => {
-      this.evento = evento;
-    });
+  obtenerDetalleEvento(eventoId: string | null): void {
+    if (eventoId !== null) {
+      this.eventoService.obtenerDetalleEvento(eventoId).subscribe((evento: any) => {
+        this.evento = evento;
+      });
+    } else {
+      console.error('El parámetro "id" es nulo.');
+    }
   }
 }
+
+
+
+
+
+

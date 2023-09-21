@@ -2,19 +2,19 @@
   <h1 class="text-center mt-4 mb-5">Lista de Eventos </h1>
   <div class="row">
     <div class="col-md-4 mb-4" *ngFor="let evento of eventos">
-      <div class="card h-100 shadow">
+      <div class="card h-100 shadow ">
       
         <div class="card-body">
           <h5 class="card-title">{{ evento.nombre }}</h5>
           <p class="card-text">{{ evento.descripcion }}</p>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">Fecha: {{ evento.fecha }}</li>
+            <li class="list-group-item">Fecha: {{ evento.fecha | date: 'dd/MM/yyyy'}}</li>
             <li class="list-group-item">Lugar: {{ evento.lugar }}</li>
             <li class="list-group-item">Tipo: {{ evento.tipo }}</li>
           </ul>
         </div>
         <div class="card-footer">
-          <a [routerLink]="['/evento', evento.id]" class="btn btn-primary btn-block">Más detalles</a>
+          <a [routerLink]="['/evento', evento.id]" class="btn btn-primary btn-block bg-success">Más detalles</a>
         </div>
       </div>
     </div>

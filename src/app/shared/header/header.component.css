@@ -1,0 +1,19 @@
+.navbar-light {
+  background-color: rgb(51, 229, 51);
+}
+
+.nav-link {
+  display: flex;
+  color: rgb(244, 244, 244);
+  font-weight: bolder;
+}
+
+.navbar-brand {
+  color: white;
+  font-weight: bold;
+  margin-right: 7vh;
+}
+
+.navbar-toggler {
+  background-color: white;
+}/*# sourceMappingURL=header.component.css.map */
